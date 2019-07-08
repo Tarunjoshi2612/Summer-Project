@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sentiment Analyser</title>
+    </head>
+    <style>
+      body {
+      background-image:url({{url_for('static', filename='image1.jpg')}});
+      background-size: 1750px 750px;
+    } 
+    .header{
+      padding: 20px;
+      text-align: center;
+      background: #005580;
+      color: white;
+      font-size: 50px;
+    }
+    .content{
+      padding: 30px;
+      color:#005580 ;
+    }
+
+    .button{
+      background-color: #005580;
+      width: 25%
+      border: none;
+      padding: 14px 20px;
+      color: white;
+        margin: 8px 0;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .button:hover {
+        background-color: #0077b3;
+    }
+    .button{
+        width: 15%;
+        font-size: 20px;
+    }
+    
+    .details{
+      width: 1000px;
+      height: 500px;
+      padding: 20px;
+      color:#005580;
+      border:3px solid #005580;
+      float:right;
+      margin: 30px 80px;
+      background-color: white;
+    }
+
+    input[type=text], select {
+      width: 15%;
+      padding: 12px 20px;
+    margin: 8px 0;
+      display: inline-block;
+        border: 1px solid #005580;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 20px
+  }
+
+    input[type=submit] {
+  width: 15%;
+  background-color: #005580;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px
+}
+
+input[type=submit]:hover {
+  background-color: #0077b3;
+}
+
+
+    </style>
+    <div class ="header">
+      <center>SENTIMENT ANALYSER</center>
+    </div>
+    <div class ="details">
+       <h1><center> What is Sentiment Analyser</center><h1>
+        <p>
+          Sentiment Analyser is an NLP based tool which is used to analyse the review of user by identifying that a given input is a positive sentiment or negative sentiment. Here we have used multinomial NaiveBayes to train the model which gives the accuracy of 85%.<br>
+          Some insights of the project:<br>
+          1. Firstly we cleaned the data by removing <b>stopwords</b>.<br>
+          2. Then, we applied <b>PorterStemmer</b> for stemming the data.<br>
+          3. We used <b>TfidfVectorizer for</b> Feature Engineering on text data.<br>
+          4. Then, we used <b>multinomial</b> NaiveBayes for training the data.<br>
+          5. Finally we checked the score of our data by <b>cross_val_score</b>.
+        </p>
+    </div>
+    <div class="content">
+      <button class="button" onclick="window.location.href='{{url_for('home')}}';">Home</button><br>
+      <button class="button" onclick="window.location.href='{{url_for('about')}}';">About</button><br>
+      <button class="button" onclick="window.location.href='{{url_for('team')}}';">Our Team</button>
+
+</div>
+  </form>
+</div>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sentiment Analyser</title>
+    </head>
+    <style>
+	      body {
+      background-image:url({{url_for('static', filename='image1.jpg')}});
+      background-size: 1750px 750px;
+    } 
+    .header{
+    	padding: 20px;
+    	text-align: center;
+    	background: #005580;
+    	color: white;
+    	font-size: 50px;
+    }
+    .content{
+    	padding: 30px;
+    	color:#005580 ;
+    }
+
+    .button{
+    	background-color: #005580;
+    	width: 25%
+    	border: none;
+    	padding: 14px 20px;
+    	color: white;
+        margin: 8px 0;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .button:hover {
+        background-color: #0077b3;
+    }
+    .button{
+        width: 15%;
+        font-size: 20px;
+    }
+    
+    .details{
+    	width: 1000px;
+    	height: 500px;
+    	padding: 20px;
+    	color:#005580;
+    	border:3px solid #005580;
+    	float:right;
+    	margin: 30px 80px;
+    	background-color: white;
+    }
+
+    .column{
+    	float: left;
+    	width: 32%;
+    	padding:5px;
+    }
+
+    input[type=text], select {
+  		width: 15%;
+  		padding: 12px 20px;
+ 		margin: 8px 0;
+ 	    display: inline-block;
+   	    border: 1px solid #005580;
+ 		border-radius: 4px;
+ 		box-sizing: border-box;
+ 		font-size: 20px
+	}
+
+    input[type=submit] {
+  width: 15%;
+  background-color: #005580;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px
+}
+
+input[type=submit]:hover {
+  background-color: #0077b3;
+}
+
+
+    </style>
+    <div class ="header">
+      <center>SENTIMENT ANALYSER</center>
+    </div>
+    <div class ="details">
+    	<center><h1>TEAM MEMBERS </h1></center> <br>
+    <div class="column">
+    <img src="/static/tarun.jpg" alt="Tarun" width="250" height="250">
+       <h2> Tarun Joshi</h2>
+       </div>
+       <div class="column">
+       	<img src="/static/yash.jpg" alt="Yash" width="250" height="250">
+       <h2> Yash Gupta</h2>
+   </div>
+       	<div class="column">
+       	<img src="/static/prajjawal.jpg" alt="Prajjawal" width="250" height="250">
+       <h2> Prajjawal Kansal</h2>
+   </div>
+    </div>
+    </div>
+    <div class="content">
+      <button class="button" onclick="window.location.href='{{url_for('home')}}';">Home</button><br>
+      <button class="button" onclick="window.location.href='{{url_for('about')}}';">About</button><br>
+      <button class="button" onclick="window.location.href='{{url_for('team')}}';">Our Team</button>
+
+</div>
+</div>
+</html>
